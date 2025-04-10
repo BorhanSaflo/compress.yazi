@@ -1,3 +1,5 @@
+--- @since 25.4.8
+
 -- Send error notification
 local function notify_error(message, urgency)
 	ya.notify({
