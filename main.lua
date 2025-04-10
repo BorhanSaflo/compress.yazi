@@ -15,11 +15,11 @@ local is_windows = ya.target_family() == "windows"
 local selected_or_hovered = ya.sync(function()
 	local tab, paths, names, path_fnames = cx.active, {}, {}, {}
 	for _, u in pairs(tab.selected) do
-		paths[#paths + 1] = tostring(u:parent())
-		names[#names + 1] = tostring(u:name())
+		paths[#paths + 1] = tostring(u.parent)
+		names[#names + 1] = tostring(u.name)
 	end
 	if #paths == 0 and tab.current.hovered then
-		paths[1] = tostring(tab.current.hovered.url:parent())
+		paths[1] = tostring(tab.current.hovered.url.parent)
 		names[1] = tostring(tab.current.hovered.name)
 	end
 	for idx, name in ipairs(names) do
@@ -79,7 +79,7 @@ end
 return {
 	entry = function()
 		-- Exit visual mode
-		ya.manager_emit("escape", { visual = true })
+		ya.mgr_emit("escape", { visual = true })
 
 		-- Define file table and output_dir (pwd)
 		local path_fnames, output_dir = selected_or_hovered()
