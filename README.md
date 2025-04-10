@@ -1,6 +1,8 @@
-# ~~archive.yazi~~ compress.yazi
+# compress.yazi
 
-A Yazi plugin that compresses selected files to an archive. Supporting yazi versions 0.2.5 and up.
+> This project is a maintained fork of [compress.yazi](https://github.com/KKV9/compress.yazi) by [KKV9](https://github.com/KKV9), which is no longer actively maintained.
+
+A Yazi plugin that compresses selected files to an archive. Supporting yazi versions 25.4.8 and up.
 
 ## Supported file types
 
@@ -22,13 +24,13 @@ A Yazi plugin that compresses selected files to an archive. Supporting yazi vers
 
 ```bash
 # For Unix platforms
-git clone https://github.com/KKV9/compress.yazi.git ~/.config/yazi/plugins/compress.yazi
+git clone https://github.com/BorhanSaflo/compress.yazi.git ~/.config/yazi/plugins/compress.yazi
 
 ## For Windows
-git clone https://github.com/KKV9/compress.yazi.git %AppData%\yazi\config\plugins\compress.yazi
+git clone https://github.com/BorhanSaflo/compress.yazi.git %AppData%\yazi\config\plugins\compress.yazi
 
 # Or with yazi plugin manager
-ya pack -a KKV9/compress
+ya pack -a BorhanSaflo/compress
 ```
 
 - Add this to your `keymap.toml`:
